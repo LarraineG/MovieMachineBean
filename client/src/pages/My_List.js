@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import Card from "../components/Card";
 import Search from "../components/Search";
+import Navigation from '../components/NavBar'
 
 class MyList extends Component {
   state = {
@@ -13,7 +14,8 @@ class MyList extends Component {
   render() {
     return (
       <section className="My_List">
-        My List Pgae
+        <Navigation />
+        My List Page
         
         <Container>
           <Search />
