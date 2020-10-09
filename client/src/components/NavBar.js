@@ -30,7 +30,7 @@ const NavBar = (props) => {
               <Input type="search" name="search" id="search" placeholder="search" />
             </NavItem>
             <NavItem>
-              <NavLink href="./UserList">MY LIST</NavLink>
+              <NavLink href="./My_List">MY LIST</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
