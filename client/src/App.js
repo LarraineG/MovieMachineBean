@@ -1,27 +1,29 @@
 import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
-import Navigation from './components/NavBar'; 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from './pages/Home'
+import MoviePage from './pages/MoviePage'
+import Login from './pages/Login'
+import Calum from './pages/Calum'
+import Chloe from './pages/Chloe'
+import Larraine from './pages/Larraine'
+import Angela from './pages/Angela'
 import MyList from './pages/My_List';
+
 function App() {
     return (
-        <div className="">
-            {/* <Layout> */}
-                {/* <Header className="" title="Title" scroll> */}
-                    <Navigation />
-                    <MyList />
-                        {/* <Link to="/home">Home</Link>
-                        <Link to="/login">Login</Link>
-                        <Link to="/mylist">My List</Link>
-                        <Link to="/moviespage">Movies Page</Link>
-                        <Link to="/adminpage/id:1">Callum Page</Link>
-                        <Link to="/adminpage/id:2">Angela Page</Link>
-                        <Link to="/adminpage/id:3">Larraine Page</Link>
-                        <Link to="/adminpage/id:4">Chloe Page</Link> */}
-                    {/* </Navigation> */}
-                {/* </Header> */}
-            {/* </Layout> */}
+        <Router>
+        <div>
+        <Route exact path={["/Home", "/"]} component={Home}/>
+        <Route exact path="/MoviePage" component={MoviePage}/>
+        <Route exact path="/My_List" component={MyList}/>
+        <Route exact path="/Login" component={Login}/>
+        <Route exact path="/Calum" component={Calum}/>
+        <Route exact path="/Chloe" component={Chloe}/>
+        <Route exact path="/Larraine" component={Larraine}/>
+        <Route exact path="/Angela" component={Angela}/>
         </div>
+        </Router>
     );
 }
 export default App;

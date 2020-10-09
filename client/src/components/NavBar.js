@@ -12,7 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
+  Input
 } from 'reactstrap';
 
 const NavBar = (props) => {
@@ -23,26 +23,32 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">Movies!</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <Input type="search" name="search" id="search" placeholder="search" />
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="./My_List">MY LIST</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Recommended By:
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                <NavLink href="/Larraine">Larraine</NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                <NavLink href="/Calum">Calum</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/Chloe">Chloe</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/Angela">Angela</NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
@@ -51,13 +57,10 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavLink href="/login">login</NavLink>
         </Collapse>
       </Navbar>
     </div>
   );
 }
-
-
-
 export default NavBar;
