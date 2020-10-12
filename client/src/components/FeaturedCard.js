@@ -28,7 +28,7 @@ const MovieCard = (props) => {
       <Card>
         <Row>
           <Col>
-            <CardImg top width="100%" src="https://alscofirstaid.com.au/wp-content/uploads/2014/01/placeholder-150x150.png" alt="Pink Flamingo" />
+            <CardImg top width="100%" src="https://user-images.githubusercontent.com/68169895/95767024-bad48c80-0c79-11eb-99a9-e9519b559627.jpg" alt="Pink Flamingo" />
           </Col>
           <Col>
             <CardBody>
