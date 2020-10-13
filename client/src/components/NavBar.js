@@ -14,6 +14,8 @@ import {
   DropdownItem,
   Input
 } from 'reactstrap';
+import LoginButton from '../components/LoginButton';
+import LogoutButton from '../components/LogoutButton';
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +59,8 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavLink href="/login">login</NavLink>
+          <LoginButton />
+          <LogoutButton />
         </Collapse>
       </Navbar>
     </div>
