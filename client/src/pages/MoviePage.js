@@ -1,19 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Navigation from '../components/NavBar'
 import MovieCard from '../components/MovieCard';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 
-const MoviePage = (props) => {
+class MoviePage extends Component {
+    state = {
+  
+    };   
+    
+render()  {
     return (
-        <div>
+        <section className="MoviePage">
 
             <Navigation />
 
-            <MovieCard title="Movie Poster" text="Title, Year, Director, Cast, Etc." />
-            <MovieCard title="idk what goes here" text="wordswordswordswordswords" />
-
-        </div>
-    );
-}
+           
+            
+            <Container className="themed-container" fluid={true}>
+                <Row className="justify-content-center">
+                    <p>Movies Page</p>
+                </Row>
+                <MovieCard 
+                className=""
+                rateThisMovie="false"
+                />
+            </Container>
+        </section>
+        )
+    }
+};
 
 
 export default MoviePage;
