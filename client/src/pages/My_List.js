@@ -15,9 +15,12 @@ class MyList extends Component {
     return (
       <section className="My_List">
         <Navigation />
-        My List Page
+      
         
-        <Container>
+        <Container className="themed-container" fluid={true}>
+        <Row className="justify-content-center">
+                    <h1>My List Page</h1>
+                </Row>
           <Search />
           <Card 
           className=""

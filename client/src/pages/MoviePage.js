@@ -13,8 +13,6 @@ render()  {
         <section className="MoviePage">
 
             <Navigation />
-
-           
             
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
