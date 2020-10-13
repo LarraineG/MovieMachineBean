@@ -40,7 +40,6 @@ const SearchBox = (props) => {
           </Col>
           <Col>
             <Form>
-<<<<<<< HEAD
                 <FormGroup>
                 <Label for="exampleEmail">Movies Watched</Label>
                 <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
@@ -54,29 +53,6 @@ const SearchBox = (props) => {
                 <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
                 </FormGroup>
             </Form>
-=======
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                What have you seen:
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                <NavLink href="/#">Watched!</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/#">Unwatched!</NavLink>
-                </DropdownItem>
-                <DropdownItem divider />
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            </Form>
-          </Col>
-          <Col>
-          </Col>
-          <Col>
-          </Col>
-          <Col>
->>>>>>> f99bf7add29dca88a4e8631fe8a581cff7c14307
           </Col>
       </Row>
     </div>

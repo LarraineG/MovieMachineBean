@@ -18,12 +18,14 @@ render()  {
             
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
-                    <p>Movies Page</p>
+                    <h1>Movies Page</h1>
                 </Row>
                 <MovieCard 
                 className=""
                 rateThisMovie="false"
+               
                 />
+               
             </Container>
         </section>
         )

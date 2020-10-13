@@ -7,6 +7,8 @@ import {Col, Row,
 } from 'reactstrap';
 import ReviewCard from './ReviewCard';
 
+
+
 const MovieCard = (props) => {
 
   const [cSelected, setCSelected] = useState([]);
@@ -48,7 +50,8 @@ return (
             <ReviewCard />
             <InputGroup>
               <Input />
-              <InputGroupAddon addonType="append"><Button>I'm a button</Button></InputGroupAddon>
+              <InputGroupAddon addonType="append"><Button>Submit Movie Review</Button></InputGroupAddon>
+
             </InputGroup>
           </Col>
       </Row>
