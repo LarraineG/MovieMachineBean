@@ -6,6 +6,12 @@ import {Col, Row,
 } from 'reactstrap';
 //import picture from "../pages/";
 
+const styles = {
+  h6: {
+    h6: "40px"
+  }
+}
+
 const Example = (props) => {
 
     const [cSelected, setCSelected] = useState([]);
@@ -32,18 +38,15 @@ const Example = (props) => {
             <Col>
                 <CardBody>
                 <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-                <CardText>Example Movie Synopsis{props.date}</CardText>
-                    <CardText>lorem ipsum{props.movieSummary}</CardText>
-                
+                <CardText>Example Movie Date{props.date}</CardText>
+                    <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum{props.movieSummary}</CardText>
                 </CardBody>
             </Col>
             <Col>
-                <Button href={props.goSeeMovieHref} target="_blank">Go see Movie</Button>
                 <ButtonGroup>
-                    <h6>Click here if you have seen this movie</h6>
-        <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Click here</Button>
-       
-      </ButtonGroup>
+                  <h6>Click here if you have seen this movie</h6>
+                    <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Click here</Button>
+                </ButtonGroup>
                 <CardText>{props.haveYouSeenThisMovis}</CardText>
             </Col>
         </Row>

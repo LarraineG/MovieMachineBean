@@ -23,7 +23,7 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Movies!</NavbarBrand>
+        <NavbarBrand href="/">The Big Screen Bean Machine!</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

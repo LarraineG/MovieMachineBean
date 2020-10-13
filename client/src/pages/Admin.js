@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/NavBar'
 
-const Chloe = (props) => {
+const Admin = (props) => {
     return (
         <div>
         
@@ -12,4 +12,4 @@ const Chloe = (props) => {
 }
 
 
-export default Chloe;
+export default Admin;
