@@ -17,6 +17,7 @@ import {
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
 
+
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 

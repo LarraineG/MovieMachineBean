@@ -33,12 +33,12 @@ const Example = (props) => {
       <Card>
         <Row>
             <Col>
-                <CardImg top width="100%" src="https://via.placeholder.com/150" alt="" />
+                <CardImg top width="50%" src="https://via.placeholder.com/50" alt="" />
             </Col>
             <Col>
                 <CardBody>
-                <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-                <CardText>Example Movie Date{props.date}</CardText>
+                <CardTitle>Movie Title{props.movieName}</CardTitle>
+                <CardText>Movie Date{props.date}</CardText>
                     <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum{props.movieSummary}</CardText>
                 </CardBody>
             </Col>

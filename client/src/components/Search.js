@@ -42,7 +42,7 @@ const SearchBox = (props) => {
             <Form>
                 <FormGroup>
                 <Label for="exampleEmail">Movies Watched</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                <Input type="email" name="email" id="exampleEmail" placeholder="List of movies watched" />
                 </FormGroup>
             </Form>
           </Col>
@@ -50,7 +50,7 @@ const SearchBox = (props) => {
             <Form>
                 <FormGroup>
                 <Label for="exampleEmail">Release Year</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                <Input type="email" name="email" id="exampleEmail" placeholder="Search Year of movie release" />
                 </FormGroup>
             </Form>
           </Col>
