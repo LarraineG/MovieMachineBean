@@ -9,7 +9,7 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
                 function arrfunc(mov){
                     var movobj={
                         title:mov.title,
-                        date:mov.release_date,
+                        date:mov.release_date.substring(0,4),
                         summary:mov.overview,
                         id:mov.id,
                         poster:"https://image.tmdb.org/t/p/w200"+mov.poster_path
@@ -41,6 +41,7 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
                 year:response.release_date.substring(0,4),
                 director:dirObj[0].name,
                 cast:cast,
+                genres:response.genres,
                 runtime:response.runtime,
                 summary:response.overview,
                 posterUrl:"https://image.tmdb.org/t/p/w600_and_h900_bestv2"+response.poster_path,
