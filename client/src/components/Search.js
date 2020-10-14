@@ -40,27 +40,19 @@ const SearchBox = (props) => {
           </Col>
           <Col>
             <Form>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                What have you seen:
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                <NavLink href="/#">Watched!</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/#">Unwatched!</NavLink>
-                </DropdownItem>
-                <DropdownItem divider />
-              </DropdownMenu>
-            </UncontrolledDropdown>
+                <FormGroup>
+                <Label for="exampleEmail">Movies Watched</Label>
+                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                </FormGroup>
             </Form>
           </Col>
           <Col>
-          </Col>
-          <Col>
-          </Col>
-          <Col>
+            <Form>
+                <FormGroup>
+                <Label for="exampleEmail">Release Year</Label>
+                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                </FormGroup>
+            </Form>
           </Col>
       </Row>
     </div>

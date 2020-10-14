@@ -44,7 +44,7 @@ const Example = (props) => {
             </Col>
             <Col>
                 <ButtonGroup>
-                  <h6>Click here if you have seen this movie</h6>
+                  <h6>Movies I've Seen</h6>
                     <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Click here</Button>
                 </ButtonGroup>
                 <CardText>{props.haveYouSeenThisMovis}</CardText>

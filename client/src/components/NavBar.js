@@ -14,7 +14,9 @@ import {
   DropdownItem,
   Input
 } from 'reactstrap';
-
+import LoginButton from '../components/LoginButton';
+import LogoutButton from '../components/LogoutButton';
+import { Link } from 'react-router-dom';
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +25,7 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Movies!</NavbarBrand>
+        <NavbarBrand><Link to="/">The Big Screen Bean Machine!</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -31,7 +33,7 @@ const NavBar = (props) => {
               <Input type="search" name="search" id="search" placeholder="search" />
             </NavItem>
             <NavItem>
-              <NavLink href="./My_List">MY LIST</NavLink>
+              <NavLink><Link to="/My_List">MY LIST</Link></NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -39,16 +41,7 @@ const NavBar = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                <NavLink href="/Larraine">Larraine</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/Calum">Calum</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/Chloe">Chloe</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/Angela">Angela</NavLink>
+                <NavLink><Link to="/Admin">Admin</Link></NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
@@ -57,7 +50,8 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavLink href="/login">login</NavLink>
+          <LoginButton />
+          <LogoutButton />
         </Collapse>
       </Navbar>
     </div>

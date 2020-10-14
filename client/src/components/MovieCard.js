@@ -1,46 +1,63 @@
-
 import React, { useState } from 'react';
-import {
-  Col, Row,
+import {Col, Row,
   Card, CardImg, CardText, CardBody,
-  CardTitle
+  CardTitle, CardSubtitle, Button, ButtonGroup,
+  InputGroup,
+  InputGroupAddon,Input,Media
 } from 'reactstrap';
-//import picture from "../pages/";
+import ReviewCard from './ReviewCard';
+
+
 
 const MovieCard = (props) => {
 
   const [cSelected, setCSelected] = useState([]);
-  const [rSelected, setRSelected] = useState(null);
+const [rSelected, setRSelected] = useState(null);
 
-  const onCheckboxBtnClick = (selected) => {
-    const index = cSelected.indexOf(selected);
-    if (index < 0) {
-      cSelected.push(selected);
-    } else {
-      cSelected.splice(index, 1);
-    }
-    setCSelected([...cSelected]);
+const onCheckboxBtnClick = (selected) => {
+  const index = cSelected.indexOf(selected);
+  if (index < 0) {
+    cSelected.push(selected);
+  } else {
+    cSelected.splice(index, 1);
   }
+  setCSelected([...cSelected]);
+}
 
 
-  return (
-    <div>
-      <Card>
-        <Row>
+return (
+  <div>
+    <Card>
+      <Row>
           <Col>
-            <CardImg top width="100%" src="https://alscofirstaid.com.au/wp-content/uploads/2014/01/placeholder-150x150.png" alt="Pink Flamingo" />
-          </Col>
-          <Col>
-            <CardBody>
+              <CardImg top width="100%" src="https://via.placeholder.com/150" alt="Movie Poster" />
               <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-              <CardText>Example Movie Synopsis{props.date}</CardText>
-              <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum diam nec massa cursus mattis. Etiam eu eros eu ante volutpat scelerisque. Maecenas et felis ante. Nulla varius odio at arcu venenatis aliquet. Nunc pellentesque sodales ante ut volutpat. Nam feugiat enim nec massa fringilla, et tempor quam sodales. Aliquam consequat tellus sit amet nibh sagittis consectetur.Nullam et odio odio. Duis vitae maximus ex. Duis ornare eget odio sed cursus. Duis in condimentum tortor. Sed viverra orci vitae odio gravida, a molestie ante convallis. Nunc ultricies nisl id elit efficitur, vel ornare massa ultricies. Nulla in placerat odio. Maecenas scelerisque, urna ut elementum tristique, tellus sapien elementum nulla, vitae consectetur nunc felis non augue. Duis ornare dolor nec orci accumsan semper. Etiam quis enim eu lorem tincidunt luctus. Praesent et felis neque.{props.movieSummary}</CardText>
-            </CardBody>
+              <CardText>Director: Some person</CardText>
+              <CardText>Cast: A lot of people</CardText>
           </Col>
-        </Row>
-      </Card>
-    </div>
-  );
+          <Col>
+              <CardBody>
+              
+                <CardText>Example Movie Synopsis{props.date}</CardText>
+                <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{props.movieSummary}</CardText>
+              
+              </CardBody>
+          </Col>
+          <Col>
+            <ReviewCard />
+            <ReviewCard />
+            <ReviewCard />
+            <ReviewCard />
+            <InputGroup>
+              <Input />
+              <InputGroupAddon addonType="append"><Button>Submit Movie Review</Button></InputGroupAddon>
+
+            </InputGroup>
+          </Col>
+      </Row>
+    </Card>
+  </div>
+);
 };
 
 export default MovieCard;
