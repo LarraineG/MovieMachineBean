@@ -5,7 +5,16 @@ const movieSchema = new Schema({
     //user (ref: "User")
     //movie title
     //link or info pertaining to movie
-    // seen : yes or no (use boolean)
+    
+    title:String,
+    date:Number,
+    summary:String,
+    id:{
+        type:Number,
+        unique:true
+    },
+    poster:String,
+    genres:Array
 })
 
 const Movie = mongoose.model("Movie", movieSchema);
