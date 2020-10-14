@@ -9,8 +9,7 @@ import {Col, Row,
 
 const SearchBox = (props) => {
 
-
-
+  
   return (
     <div>
       <Row>
