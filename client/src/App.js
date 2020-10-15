@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, useHistory } from "react-router-dom";
 import Home from './pages/Home'
 import MoviePage from './pages/MoviePage'
