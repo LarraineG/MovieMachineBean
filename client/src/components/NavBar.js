@@ -17,10 +17,12 @@ import {
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const { user } = useAuth0();
 
   return (
     <div>
@@ -29,11 +31,14 @@ const NavBar = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <Input type="search" name="search" id="search" placeholder="search" />
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink><Link to="/My_List">MY LIST</Link></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink><Link to="/MoviePage">Movie Page</Link></NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -50,6 +55,7 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
+          <p>{user ? user.email : "" }</p>
           <LoginButton />
           <LogoutButton />
         </Collapse>

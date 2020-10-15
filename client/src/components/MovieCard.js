@@ -30,7 +30,7 @@ return (
     <Card>
       <Row>
           <Col>
-              <CardImg top width="100%" src="https://via.placeholder.com/150" alt="Movie Poster" />
+              <CardImg top width="100%" src="https://via.placeholder.com/75" alt="Movie Poster" />
               <CardTitle>Example Movie Title{props.movieName}</CardTitle>
               <CardText>Director: Some person</CardText>
               <CardText>Cast: A lot of people</CardText>
