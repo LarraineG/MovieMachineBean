@@ -1,3 +1,4 @@
+
 const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
     const searchCall=function(search){var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=5a3f3373b8ebcad2db18450af15ec4fd&language=en-US&query="+search+"&page=1&include_adult=false";
             $.ajax({
