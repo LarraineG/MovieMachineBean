@@ -19,7 +19,6 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
                 }
                 console.log(moviesarray);
             });}
-        
     const idCall=function(id){
         var queryURL="https://api.themoviedb.org/3/movie/"+id+"?api_key=5a3f3373b8ebcad2db18450af15ec4fd&language=en-US&append_to_response=credits,external_ids"
         axios.get(queryURL)

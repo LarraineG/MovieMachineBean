@@ -6,9 +6,7 @@ import Admin from './pages/Admin'
 import MyList from './pages/My_List';
 
 function App() {
-  
     return (
-    
         <Router>
         <div>
         <Route exact path={["/Home", "/"]} component={Home}/>
