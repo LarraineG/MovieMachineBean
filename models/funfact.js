@@ -6,6 +6,6 @@ const factSchema = new Schema({
     fact:String
 })
 
-const User = mongoose.model("Funfact", userSchema);
+const Funfact = mongoose.model("Funfact", factSchema);
 
 module.exports = Funfact;

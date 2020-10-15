@@ -13,4 +13,4 @@ const AddMovieButton = () => {
     )
 }
 
-export default AddMovieButton
+export default AddMovieButton;
