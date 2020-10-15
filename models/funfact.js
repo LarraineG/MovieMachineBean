@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const factSchema = new Schema({
-    id:Number,
+const factSchema = new Schema({    
     fact:String
 })
 

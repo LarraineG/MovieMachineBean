@@ -8,6 +8,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 
+const routes = require ("./routes")
+app.use(routes)
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   const path = require('path');
@@ -18,6 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 //require in apiRoutes when ready
 //
+
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
