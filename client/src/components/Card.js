@@ -1,21 +1,14 @@
 
 import React, { useState } from 'react';
+import "./card.css";
 import {Col, Row,
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, ButtonGroup
+  CardTitle, Button, ButtonGroup
 } from 'reactstrap';
-//import picture from "../pages/";
-
-const styles = {
-  h6: {
-    h6: "40px"
-  }
-}
 
 const Example = (props) => {
 
     const [cSelected, setCSelected] = useState([]);
-  const [rSelected, setRSelected] = useState(null);
 
   const onCheckboxBtnClick = (selected) => {
     const index = cSelected.indexOf(selected);
@@ -27,27 +20,26 @@ const Example = (props) => {
     setCSelected([...cSelected]);
   }
 
-
   return (
+    
     <div>
       <Card>
         <Row>
-            <Col>
-                <CardImg top width="100%" src="https://via.placeholder.com/150" alt="" />
+            <Col className="text-center">
+                <img src="https://via.placeholder.com/300" alt="" />
             </Col>
             <Col>
                 <CardBody>
-                <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-                <CardText>Example Movie Date{props.date}</CardText>
+                <CardTitle>Movie Title{props.movieName}</CardTitle>
+                <CardText>Movie Date{props.date}</CardText>
                     <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum{props.movieSummary}</CardText>
                 </CardBody>
             </Col>
             <Col>
-                <ButtonGroup>
-                  <h6>Movies I've Seen</h6>
-                    <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Click here</Button>
-                </ButtonGroup>
-                <CardText>{props.haveYouSeenThisMovis}</CardText>
+              <Row className="justify-content-around mt-3">
+                <CardText>Have you seen this movie?</CardText>
+                <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Seen this movie?</Button>
+              </Row>
             </Col>
         </Row>
       </Card>
