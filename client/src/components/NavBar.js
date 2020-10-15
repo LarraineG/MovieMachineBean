@@ -19,6 +19,7 @@ import LogoutButton from '../components/LogoutButton';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 const NavBar = (props) => {
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -38,7 +39,13 @@ const NavBar = (props) => {
               <NavLink><Link to="/My_List">MY LIST</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink><Link to="/MoviePage">Movie Page</Link></NavLink>
+              <form onSubmit={props.onSubmit}>
+              <input onChange={props.onChange}
+                value={props.searchInput}
+                name="search"
+                placeholder="Search Movie Title"/>
+                <button type="submit">Search</button>
+              </form>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

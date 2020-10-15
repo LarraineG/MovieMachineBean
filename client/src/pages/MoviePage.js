@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import Navigation from '../components/NavBar'
+import React, { useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import AddMovieButton from '../components/AddMovieButton';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
-const MoviePage = () => {
+const MoviePage = (props) => {
     const { user } = useAuth0()
 
+    useEffect( () => {
+        console.log(props.movie)
+        //api call
+    }, [])
     
 
 
     return (
         <section className="MoviePage">
 
-            <Navigation />
 
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">

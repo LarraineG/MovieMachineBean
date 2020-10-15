@@ -1,6 +1,5 @@
 import React from 'react';
 import FeaturedCard from '../components/FeaturedCard';
-import Navigation from '../components/NavBar';
 import { Container, Row, Col } from 'reactstrap';
 import DidYouKnow from '../components/DidYouKnowCard'
 
@@ -13,7 +12,6 @@ const styles = {
 const Home = (props) => {
     return (
         <Container fluid>
-            <Navigation />
             <Row>
                 <Col sm="7">
                     <FeaturedCard />
