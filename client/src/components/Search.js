@@ -1,58 +1,46 @@
-import React from 'react';
-import {Col, Row,
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, ButtonGroup,  Form, FormGroup, Label, Input, NavLink, UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+import React, { useState } from 'react';
+import {
+  Col, Row, Form, FormGroup, Label, Input, DropdownToggle, Dropdown, DropdownMenu, DropdownItem 
 } from 'reactstrap';
 
 const SearchBox = (props) => {
 
-  
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggle = () => setDropdownOpen(prevState => !prevState);
+
   return (
     <div>
       <Row>
-          <Col>
-            <Form>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Genre
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                <NavLink href="/#">Comedy</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/#">Drama</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/#">Horror</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/#">Cheesy Hallmark</NavLink>
-                </DropdownItem>
-                <DropdownItem divider />
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            </Form>
-          </Col>
-          <Col>
-            <Form>
-                <FormGroup>
-                <Label for="exampleEmail">Movies Watched</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="List of movies watched" />
-                </FormGroup>
-            </Form>
-          </Col>
-          <Col>
-            <Form>
-                <FormGroup>
-                <Label for="exampleEmail">Release Year</Label>
-                <Input type="email" name="email" id="exampleEmail" placeholder="Search Year of movie release" />
-                </FormGroup>
-            </Form>
-          </Col>
+        <Col>
+          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+            <DropdownToggle caret>
+              Genre
+        </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Comedy</DropdownItem>
+              <DropdownItem>Drama</DropdownItem>
+              <DropdownItem>Cult Classics</DropdownItem>
+              <DropdownItem>Kids</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </Col>
+        <Col>
+          <Form>
+            <FormGroup>
+              <Label for="exampleEmail">Movies Watched</Label>
+              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            </FormGroup>
+          </Form>
+        </Col>
+        <Col>
+          <Form>
+            <FormGroup>
+              <Label for="exampleEmail">Release Year</Label>
+              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            </FormGroup>
+          </Form>
+        </Col>
       </Row>
     </div>
   );

@@ -8,9 +8,7 @@ import MyList from './pages/My_List';
 import Navigation from './components/NavBar';
 
 function App() {
-
     return (
-
         <Router>
             <Routes></Routes>
         </Router>

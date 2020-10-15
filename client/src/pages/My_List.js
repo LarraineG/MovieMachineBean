@@ -17,10 +17,10 @@ const Dashboard = (props) => {
       isAuthenticated &&
 
       <section className="My_List">
-          <Container className="themed-container" fluid={true}>
-            <Row className="justify-content-center">
-                    <h1>My List Page</h1>
-            </Row>
+        <Container className="themed-container" fluid={true}>
+        <Row className="justify-content-center m-3">
+          <h1>My List Page</h1>
+        </Row>
           <Search />
           <Card 
           className=""
