@@ -13,8 +13,8 @@ const SearchBox = (props) => {
 
   return (
     <div>
-      <Row>
-          <Col>
+      <Row className="justify-content-center m-3 text-center">
+          <Col xs="3">
             <Form>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -38,7 +38,7 @@ const SearchBox = (props) => {
             </UncontrolledDropdown>
             </Form>
           </Col>
-          <Col>
+          <Col xs="3">
             <Form>
                 <FormGroup>
                 <Label for="exampleEmail">Movies Watched</Label>
@@ -46,7 +46,7 @@ const SearchBox = (props) => {
                 </FormGroup>
             </Form>
           </Col>
-          <Col>
+          <Col xs="3">
             <Form>
                 <FormGroup>
                 <Label for="exampleEmail">Release Year</Label>

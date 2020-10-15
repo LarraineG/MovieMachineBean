@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import "./card.css";
 import {Col, Row,
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, ButtonGroup
@@ -32,8 +33,8 @@ const Example = (props) => {
     <div>
       <Card>
         <Row>
-            <Col>
-                <CardImg top width="50%" src="https://via.placeholder.com/50" alt="" />
+            <Col className="text-center">
+                <img src="https://via.placeholder.com/300" alt="" />
             </Col>
             <Col>
                 <CardBody>
@@ -43,11 +44,10 @@ const Example = (props) => {
                 </CardBody>
             </Col>
             <Col>
-                <ButtonGroup>
-                  <h6>Movies I've Seen</h6>
-                    <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Click here</Button>
-                </ButtonGroup>
-                <CardText>{props.haveYouSeenThisMovis}</CardText>
+              <Row className="justify-content-around mt-3">
+                <CardText>Have you seen this movie?</CardText>
+                <Button color="primary" onClick={() => onCheckboxBtnClick(1)} active={cSelected.includes(1)}>Seen this movie?</Button>
+              </Row>
             </Col>
         </Row>
       </Card>
