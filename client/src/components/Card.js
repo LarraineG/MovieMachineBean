@@ -2,20 +2,12 @@
 import React, { useState } from 'react';
 import {Col, Row,
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, ButtonGroup
+  CardTitle, Button, ButtonGroup
 } from 'reactstrap';
-//import picture from "../pages/";
-
-const styles = {
-  h6: {
-    h6: "40px"
-  }
-}
 
 const Example = (props) => {
 
     const [cSelected, setCSelected] = useState([]);
-  const [rSelected, setRSelected] = useState(null);
 
   const onCheckboxBtnClick = (selected) => {
     const index = cSelected.indexOf(selected);
