@@ -3,16 +3,20 @@ import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import Card from "../components/Card";
 import Search from "../components/Search";
 import Navigation from '../components/NavBar'
+import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 
-class MyList extends Component {
-  state = {
 
-  };
+
+const Dashboard = (props) => {
 
   //functions, componentDidMounts go here
+  
+    const { isAuthenticated } = useAuth0();
 
-  render() {
     return (
+
+      isAuthenticated &&
+
       <section className="My_List">
         <Navigation />
         <Container className="themed-container" fluid={true}>
@@ -24,12 +28,19 @@ class MyList extends Component {
           className=""
           goSeeMovie="false"
           />
-        </Container>
-
+          </Container>
       </section>
 
     )
-  }
-};
+}
 
-export default MyList;
+
+export default withAuthenticationRequired(Dashboard, {
+  // Show a message while the user waits to be redirected to the next page.
+  // this may be the login page, or it may just be react taking a minute to load the dashboard
+  onRedirecting: () => {
+    return (
+      <h1>Redirecting...</h1>
+    );
+  },
+});

@@ -9,8 +9,7 @@ import {Col, Row,
 
 const SearchBox = (props) => {
 
-
-
+  
   return (
     <div>
       <Row className="justify-content-center m-3 text-center">

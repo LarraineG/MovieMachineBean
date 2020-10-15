@@ -12,7 +12,7 @@ ReactDOM.render(
     <Auth0Provider
     domain={domain}
     clientId={clientId}
-    redirectUri={window.location.origin}>
+    redirectUri={window.location.origin+"/MoviePage"}>
     <App />
     </Auth0Provider>,
     document.getElementById("root"));

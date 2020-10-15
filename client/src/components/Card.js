@@ -5,7 +5,6 @@ import {Col, Row,
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, ButtonGroup
 } from 'reactstrap';
-//import picture from "../pages/";
 
 const styles = {
   h6: {
@@ -28,8 +27,8 @@ const Example = (props) => {
     setCSelected([...cSelected]);
   }
 
-
   return (
+    
     <div>
       <Card>
         <Row>
