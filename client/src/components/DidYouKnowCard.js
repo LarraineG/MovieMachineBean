@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle
 } from 'reactstrap';
+import API from "../utils/API";
 
 const DidYouKnow = (props) => {
 
-  // export function Funfact({ children }) {
-  //   return <p className="group">{children}</p>;
-  // }
-  
-  // export function Funfact({fact})
+  const[fact,setFact]=useState({});
+    useEffect( () => {
+        API.getFact()
+        .then(response=>{console.log(response); 
+        const factArray=(response.data);
+        console.log(factArray[0].fact)
+        setFact(factArray[0])})
+        .catch(console.log)
+    },
+    [])
 
   return (
     <div>
@@ -20,9 +26,7 @@ const DidYouKnow = (props) => {
           <CardTitle>Card title</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
               <CardText>
-                <p className="group-item">
-                {/* <p>{fact}</p> */}
-                </p>
+                {fact.fact}
               </CardText>          
         </CardBody>
       </Card>
