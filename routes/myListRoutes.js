@@ -1,6 +1,5 @@
 const router = require ("express").Router()
 const myListControllers = require ("../controllers/myListControllers")
-router.route ("/").post(myListControllers.create)
-router.route ("/:id").get(myListControllers.findById)
+router.route ("/:id").get(myListControllers.findById).post(myListControllers.create)
 module.exports = router
 

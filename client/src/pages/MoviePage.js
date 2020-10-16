@@ -80,7 +80,7 @@ const MoviePage = (props) => {
                 summary={movie.summary}
                 poster={movie.posterUrl}
                 />
-                <AddMovieButton />
+                <AddMovieButton movie={movie}/>
             </Container>
         </section>
     )

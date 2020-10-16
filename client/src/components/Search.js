@@ -20,26 +20,22 @@ const SearchBox = (props) => {
             <DropdownMenu>
               <DropdownItem>Comedy</DropdownItem>
               <DropdownItem>Drama</DropdownItem>
-              <DropdownItem>Cult Classics</DropdownItem>
-              <DropdownItem>Kids</DropdownItem>
+              <DropdownItem>Horror</DropdownItem>
+              <DropdownItem>Action</DropdownItem>
+              <DropdownItem>Romance</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </Col>
         <Col>
-          <Form>
-            <FormGroup>
-              <Label for="exampleEmail">Movies Watched</Label>
-              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-            </FormGroup>
-          </Form>
-        </Col>
-        <Col>
-          <Form>
-            <FormGroup>
-              <Label for="exampleEmail">Release Year</Label>
-              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-            </FormGroup>
-          </Form>
+          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+            <DropdownToggle caret>
+              What have you seen?
+            </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Watched</DropdownItem>
+                <DropdownItem>Unwatched</DropdownItem>
+              </DropdownMenu>
+          </Dropdown>
         </Col>
       </Row>
     </div>
