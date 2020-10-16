@@ -66,12 +66,18 @@ const MoviePage = (props) => {
 
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
-                    <h1>{movie.title}</h1>
+                    {/* <h1>{movie.title}</h1> */}
                     {JSON.stringify(user)}
                 </Row>
                 <MovieCard
-                    className=""
-                    rateThisMovie="false"
+                title={movie.title}
+                year={movie.year}
+                cast={movie.cast}
+                runtime={movie.runtime}
+                genres={movie.genres}
+                director={movie.director}
+                summary={movie.summary}
+                poster={movie.posterUrl}
                 />
                 <AddMovieButton />
             </Container>

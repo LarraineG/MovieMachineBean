@@ -30,15 +30,15 @@ return (
     <Card>
       <Row>
           <Col>
-              <CardImg top width="100%" src="https://via.placeholder.com/75" alt="Movie Poster" />
-              <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-              <CardText>Director: Some person</CardText>
-              <CardText>Cast: A lot of people</CardText>
+              <CardImg top width="100%" src={props.poster} alt="Movie Poster" />
+              <CardTitle>Example Movie Title{props.title}</CardTitle>
+              <CardText>Director: {props.director}</CardText>
+              <CardText>Cast: {props.cast}</CardText>
           </Col>
           <Col>
               <CardBody>
               
-                <CardText>Example Movie Synopsis{props.date}</CardText>
+                <CardText>Example Movie Synopsis{props.summary}</CardText>
                 <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{props.movieSummary}</CardText>
               
               </CardBody>
