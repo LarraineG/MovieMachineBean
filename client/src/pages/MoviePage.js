@@ -11,6 +11,8 @@ const MoviePage = (props) => {
     useEffect( () => {
         console.log(props.movie)
         //api call
+        
+        movieCall = searchCall(props.movie)[0]
     }, [])
     
 
@@ -22,7 +24,6 @@ const MoviePage = (props) => {
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
                     <h1>Movies Page</h1>
-                    {JSON.stringify(user)}
                 </Row>
                 <MovieCard
                     className=""
