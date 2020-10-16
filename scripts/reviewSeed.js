@@ -54,6 +54,18 @@ const reviewSeed = [
   user:1,
   rating:4,
   review:"♫The stuff is here now. A great new taste sensation. Alive and free now. Gives you elevation. ENOUGH IS NEVER ENOUGH *clap* EEENOUGH IS NEVER ENOUGH *clap* OF THE STUFF *clap clap*"
+},
+{
+  movieId:2654,
+  user:1,
+  rating: 5,
+  review:"The best lovecraft movie. It's not actually based on any lovecraft story. Sam Neil is a wonderful man."
+},
+{
+  movieId:8413,
+  user:1,
+  rating:5,
+  review:"This movie is so good, you don't need eyes to see it. Rachel would hate this movie."
 }
 ];
 
