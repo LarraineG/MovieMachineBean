@@ -11,8 +11,8 @@ const Admin = (props) => {
             <img src={user.picture} alt={user.name} />
             <h2>{user.name}</h2>
             <p>{user.email}</p>
-            <p>{user.sub}</p>
-
+            <p>this is the user.sub number for auth0 the unique user id is this line{user.sub}</p>
+            <p>{user.given_name}</p>
         </div>
     );
 }

@@ -62,7 +62,7 @@ const NavBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <p>{user ? user.email : "" }</p>
+          <p>{user ? "Hello, " + user.given_name: "" }</p>
           <LoginButton />
           <LogoutButton />
         </Collapse>
