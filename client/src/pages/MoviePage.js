@@ -4,13 +4,16 @@ import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import AddMovieButton from '../components/AddMovieButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
+import { useHistory } from 'react-router-dom';
 
 const MoviePage = (props) => {
     const { user } = useAuth0()
     const[movie,setMovie]=useState({});
+    const history = useHistory();
     useEffect( () => {
         console.log(props.movie)
         //api call
+        if (!props.movie) return history.push("/")
         API.searchCall(props.movie).then(
 
             response=> { const movieId=response.data.results[0].id;
