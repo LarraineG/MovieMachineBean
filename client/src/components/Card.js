@@ -23,7 +23,7 @@ const Example = (props) => {
   return (
     
     <div>
-      <Card>
+      <Card className="card">
         <Row>
             <Col className="text-center">
                 <img src="https://via.placeholder.com/300" alt="" />
