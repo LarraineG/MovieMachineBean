@@ -32,9 +32,11 @@ const MovieCard = (props) => {
           </Col>
           <Col>
             <CardBody>
-              <CardTitle>Example Movie Title{props.movieName}</CardTitle>
-              <CardText>Example Movie Synopsis{props.date}</CardText>
-              <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum diam nec massa cursus mattis. Etiam eu eros eu ante volutpat scelerisque. Maecenas et felis ante. Nulla varius odio at arcu venenatis aliquet. Nunc pellentesque sodales ante ut volutpat. Nam feugiat enim nec massa fringilla, et tempor quam sodales. Aliquam consequat tellus sit amet nibh sagittis consectetur.Nullam et odio odio. Duis vitae maximus ex. Duis ornare eget odio sed cursus. Duis in condimentum tortor. Sed viverra orci vitae odio gravida, a molestie ante convallis. Nunc ultricies nisl id elit efficitur, vel ornare massa ultricies. Nulla in placerat odio. Maecenas scelerisque, urna ut elementum tristique, tellus sapien elementum nulla, vitae consectetur nunc felis non augue. Duis ornare dolor nec orci accumsan semper. Etiam quis enim eu lorem tincidunt luctus. Praesent et felis neque.{props.movieSummary}</CardText>
+              <CardTitle>Example Movie Title</CardTitle>
+              <CardText>Directory: John Waters</CardText>
+              <CardText>Writer: John Waters</CardText>
+              <CardText>1979</CardText>
+              <CardText>Notorious Baltimore criminal and underground figure Divine goes up against a sleazy married couple who make a passionate attempt to humiliate her and seize her tabloid-given title as "The Filthiest Person Alive".</CardText>
             </CardBody>
           </Col>
         </Row>

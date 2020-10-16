@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import Card from "../components/Card";
 import Search from "../components/Search";
-import Navigation from '../components/NavBar'
 import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 
 
@@ -18,7 +17,6 @@ const Dashboard = (props) => {
       isAuthenticated &&
 
       <section className="My_List">
-        <Navigation />
         <Container className="themed-container" fluid={true}>
         <Row className="justify-content-center m-3">
           <h1>My List Page</h1>
