@@ -3,6 +3,12 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const mongoose = require("mongoose");
+const db = require("./models");
+// This file empties the Books collection and inserts the books below
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/project3"
+);
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
