@@ -6,6 +6,7 @@ import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 
 
 
+
 const Dashboard = (props) => {
 
   //functions, componentDidMounts go here
@@ -23,7 +24,7 @@ const Dashboard = (props) => {
         </Row>
             <h2>{user.name}</h2>
             <p>{user.email}</p>
-            <p>this is the user.sub number for auth0 the unique user id is this line{user.sub}</p>
+            <p>{user.sub}</p>
           <Search />
           <Card 
           className=""

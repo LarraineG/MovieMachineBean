@@ -47,8 +47,8 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
     }
 
    // Adds movie to the database
-    const addMovie = function(listmovieData) {
-    return axios.post("/api/myList", listmovieData);
+    const addMovie = function(listmovieData, id) {
+    return axios.post("/api/myList/"+id, listmovieData);
     }
 
     export default{
