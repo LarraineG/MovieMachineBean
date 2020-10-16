@@ -66,6 +66,32 @@ const reviewSeed = [
   user:1,
   rating:5,
   review:"This movie is so good, you don't need eyes to see it. Rachel would hate this movie."
+},
+{
+  movieId:6404,
+  user:1,
+  rating:5,
+  review:"Herzog's remake of what is possibly the most famous silent movie of all time. The intro, which is just long close ups of real mummies is the most haunting openings in any film I've seen. One of the best remakes of all time."
+},
+{
+  movieId:1694,
+  user:1,
+  rating:4,
+  review:"Great pacing, script, and special effects. Jeffery Combs gives an amazing performance descending into obsession."
+},
+{
+  movieId:300668,
+  user:1,
+  rating:4,
+  review:"Combined creature feature and body horror. An oppresive atmosphere of constant unease and fear as the protagonists try to understand the nature of the movie's alien threat. A deeply unsettling horror."
+},
+{
+  movieId:16307,
+  user:1,
+  rating:4,
+  review:"This movie instills a specific kind of anxiety stemming from the feeling of being an unwelcome outsider. The tense buildup and shaking finale leave you with a feeling no other movie can match."
+},
+
 //started user 2 angela
 {
   movieId:114,
