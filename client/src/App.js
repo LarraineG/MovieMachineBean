@@ -20,6 +20,7 @@ function Routes(props) {
 
     const [SearchString, setSearchString] = useState("")
 
+
     function handleInputChange(event) {
         const { value } = event.target;
         setSearchString(value)
@@ -30,6 +31,8 @@ function Routes(props) {
         console.log(SearchString);
         history.push("/MoviePage")
     }
+
+
     return (
         <div>
             <Navigation onChange={handleInputChange} searchInput={SearchString} onSubmit={EnterBtn} />
