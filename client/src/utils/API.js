@@ -8,8 +8,12 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
     const idCall=function(id){
         var queryURL="https://api.themoviedb.org/3/movie/"+id+"?api_key=5a3f3373b8ebcad2db18450af15ec4fd&language=en-US&append_to_response=credits,external_ids"
         return(axios.get(queryURL));
-        
     }
+
+    const getFact= function(fact) {
+        return axios.get("/api/fact");
+        }
+    
     const utellyCall=function(id){
         
         axios({
@@ -34,10 +38,11 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
             .catch((error)=>{
                 console.log(error)
             })
-
+    
     }
     export default{
         idCall:idCall,
-        utellyCall:utellyCall
-        ,searchCall:searchCall
+        utellyCall:utellyCall,
+        searchCall:searchCall,
+        getFact
     };

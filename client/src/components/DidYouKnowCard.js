@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle
 } from 'reactstrap';
-
+import API from "../utils/API";
 const DidYouKnow = (props) => {
 
-  // export function Funfact({ children }) {
-  //   return <p className="group">{children}</p>;
-  // }
-  
-  // export function Funfact({fact})
+  const[fact,setFact]=useState({});
+    useEffect( () => {
+        API.getFact()
+        .then(response=>{console.log(response)})
+        .catch(console.log)
+    },
+    [])
 
   return (
     <div>
