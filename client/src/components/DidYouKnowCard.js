@@ -9,11 +9,10 @@ const DidYouKnow = (props) => {
 
   const[fact,setFact]=useState({});
     useEffect( () => {
-      const factArray = []
         API.getFact()
         .then(response=>{console.log(response); 
-        factArray=(response.data);
-        console.log(factArray[1].fact)
+        const factArray=(response.data);
+        console.log(factArray[0].fact)
         setFact(factArray[0])})
         .catch(console.log)
     },
