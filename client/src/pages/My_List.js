@@ -10,7 +10,7 @@ const Dashboard = (props) => {
 
   //functions, componentDidMounts go here
   
-    const { isAuthenticated } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
 
     return (
 
@@ -21,6 +21,9 @@ const Dashboard = (props) => {
         <Row className="justify-content-center m-3">
           <h1>My List Page</h1>
         </Row>
+            <h2>{user.name}</h2>
+            <p>{user.email}</p>
+            <p>this is the user.sub number for auth0 the unique user id is this line{user.sub}</p>
           <Search />
           <Card 
           className=""
