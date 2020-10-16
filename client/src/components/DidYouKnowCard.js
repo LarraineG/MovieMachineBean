@@ -10,7 +10,10 @@ const DidYouKnow = (props) => {
   const[fact,setFact]=useState({});
     useEffect( () => {
         API.getFact()
-        .then(response=>{console.log(response)})
+        .then(response=>{console.log(response); 
+        const factArray=(response.data);
+        console.log(factArray[0].fact)
+        setFact(factArray[0])})
         .catch(console.log)
     },
     [])
@@ -23,6 +26,7 @@ const DidYouKnow = (props) => {
           <CardTitle>Card title</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
               <CardText>
+                {fact.fact}
               </CardText>          
         </CardBody>
       </Card>
