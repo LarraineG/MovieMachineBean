@@ -66,10 +66,10 @@ const MoviePage = (props) => {
     return (
         <section className="MoviePage">
 
-
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
                 </Row>
+            
                 <MovieCard
                 title={movie.title}
                 year={movie.year}
@@ -80,7 +80,7 @@ const MoviePage = (props) => {
                 summary={movie.summary}
                 poster={movie.posterUrl}
                 />
-                <AddMovieButton />
+                <AddMovieButton movie={movie}/>
             </Container>
         </section>
     )

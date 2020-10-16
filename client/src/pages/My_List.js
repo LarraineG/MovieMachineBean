@@ -6,11 +6,12 @@ import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 
 
 
+
 const Dashboard = (props) => {
 
   //functions, componentDidMounts go here
   
-    const { isAuthenticated } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
 
     return (
 
@@ -21,6 +22,9 @@ const Dashboard = (props) => {
         <Row className="justify-content-center m-3">
           <h1>My List Page</h1>
         </Row>
+            <h2>{user.name}</h2>
+            <p>{user.email}</p>
+            <p>{user.sub}</p>
           <Search />
           <Card 
           className=""

@@ -40,9 +40,24 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
             })
     
     }
+
+      // Gets all saved movies
+        const getAddedMovie = function() {
+    return axios.get("/api/myList");
+    }
+
+   // Adds movie to the database
+    const addMovie = function(listmovieData, id) {
+    return axios.post("/api/myList/"+id, listmovieData);
+    }
+
     export default{
         idCall:idCall,
         utellyCall:utellyCall,
         searchCall:searchCall,
+<<<<<<< HEAD
         getFact
+=======
+        getFact, getAddedMovie, addMovie
+>>>>>>> 073ec3cf7b4f77bb11e586f12363486e07a65cfe
     };

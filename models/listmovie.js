@@ -2,10 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const listMovieSchema = new Schema({
-    movieId:Number,
     title:String,
     summary:String,
-    id:{
+    movieId:{
         type:Number,
         unique:true,
     },
