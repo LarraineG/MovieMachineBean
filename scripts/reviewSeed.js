@@ -55,7 +55,58 @@ const reviewSeed = [
   user:1,
   rating:4,
   review:"♫The stuff is here now. A great new taste sensation. Alive and free now. Gives you elevation. ENOUGH IS NEVER ENOUGH *clap* EEENOUGH IS NEVER ENOUGH *clap* OF THE STUFF *clap clap*"
+},
+//started user 2 angela
+{
+  movieId:114,
+  user:2,
+  rating:5,
+  review:"Who knew it was so much fun to be a hooker? Fun loving romantic comedy that never gets old"
+},
+
+{
+  movieId:22881,
+  user:2,
+  rating:5,
+  review:"Based on the extraordinary true story with a very happy ending"
+},
+{
+  movieId:57119,
+  user:2,
+  rating:4,
+  review:"Very close to my own personal love story of princess meets the bad boy with a happy ending"
+},
+{
+  movieId:67660,
+  user:2,
+  rating:3,
+  review:"The balance of power in four couples’ relationships is upset when the women start using the advice in Steve Harvey’s book, Act Like A Lady with all couples making the grade"
+},
+{
+  movieId:222899,
+  user:2,
+  rating:4,
+  review:"A modern reimagining of the classic romantic comedy, this contemporary version closely follows new love for two couples as they journey from the bar to the bedroom and are eventually put to the test in the real world."
+},
+{
+  movieId:168530,
+  user:2,
+  rating:5,
+  review:"Another great Ice Cube movie with both truth and fiction to make very funny"
+},
+{
+  movieId:257091,
+  user:2,
+  rating:5,
+  review:"Very funny movie that managed to put black and white together without making it about race"
+},
+{
+  movieId:274167,
+  user:2,
+  rating:5,
+  review:"The story of a mild-mannered radio executive who strives to become the best stepdad ever to his wife's two children that has to deal with a bad-boy ex made very funny"
 }
+
 ];
 
 db.Review.remove({})
