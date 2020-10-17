@@ -1,29 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Col, Row,
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, ButtonGroup,
+  CardTitle, Button,
   InputGroup,
-  InputGroupAddon,Input,Media
+  InputGroupAddon, Input
 } from 'reactstrap';
 import ReviewCard from './ReviewCard';
 
 
 
 const MovieCard = (props) => {
-
-  const [cSelected, setCSelected] = useState([]);
-const [rSelected, setRSelected] = useState(null);
-
-const onCheckboxBtnClick = (selected) => {
-  const index = cSelected.indexOf(selected);
-  if (index < 0) {
-    cSelected.push(selected);
-  } else {
-    cSelected.splice(index, 1);
-  }
-  setCSelected([...cSelected]);
-}
-
 
 return (
   <div>
@@ -41,7 +27,6 @@ return (
                   <CardText>Director: {props.director}</CardText>
                   <CardText>Cast: {props.cast}</CardText>
                   <CardText>Runtime: {props.runtime}</CardText>
-                  {/* <CardText>Genre: {props.genres}</CardText> */}
                 </Col>
               </CardBody>
           </Col>

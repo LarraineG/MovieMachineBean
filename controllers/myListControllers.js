@@ -14,4 +14,10 @@ module.exports = {
     .catch(error=>res.json(error))
     }
 
-    }
+    // findAll: function (req,res)
+    // {db.ListMovie.find({user:req.params.user})
+    // .then (data=>{res.json(data)})
+    // .catch(error=>res.json(error))
+    // },
+
+}

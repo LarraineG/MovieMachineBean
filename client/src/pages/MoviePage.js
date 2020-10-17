@@ -1,45 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import MovieCard from '../components/MovieCard';
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import AddMovieButton from '../components/AddMovieButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import { useHistory } from 'react-router-dom';
 
 const MoviePage = (props) => {
+
     const { user } = useAuth0()
     const[movie,setMovie]=useState({});
     const history = useHistory();
+
     useEffect( () => {
         console.log(props.movie)
-        //api call
+        
         if (!props.movie) return history.push("/")
         API.searchCall(props.movie).then(
 
             response=> { const movieId=response.data.results[0].id;
-                // console.log(response);
-                // const movieArray=response.data.results
-                // .map(arrfunc);
-                // function arrfunc(mov){
-                //     var movobj={
-                //         title:mov.title,
-                //         date:mov.release_date.substring(0,4),
-                //         summary:mov.overview,
-                //         id:mov.id,
-                //         poster:"https://image.tmdb.org/t/p/w200"+mov.poster_path
-                //     }
-                //         return(movobj);
-                // }
-                // console.log(movieArray);
+                
             API.idCall(movieId).then(function({data:response}){
                 console.log(response);
                 var dirObj=response.credits.crew.filter(x=> x.department=="Directing");
                 var cast="";
-                for(let i=0;i<3&&i<response.credits.cast.length;i++){
+                for (let i=0;i<3&&i<response.credits.cast.length;i++) {
                     if (cast.length>1){
                         cast+=(", ")
                     }
-                    cast+=(response.credits.cast[i].name);
+                    cast += (response.credits.cast[i].name);
                 }
                 console.log(cast)
                 
@@ -60,16 +49,12 @@ const MoviePage = (props) => {
         )
 
     }, [])
-    
-
 
     return (
         <section className="MoviePage">
-
             <Container className="themed-container" fluid={true}>
                 <Row className="justify-content-center">
                 </Row>
-            
                 <MovieCard
                 title={movie.title}
                 year={movie.year}
@@ -85,7 +70,5 @@ const MoviePage = (props) => {
         </section>
     )
 }
-
-
 
 export default MoviePage;
