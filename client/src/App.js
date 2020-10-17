@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import MoviePage from './pages/MoviePage'
 import Admin from './pages/Admin'
 import MyList from './pages/My_List';
-import Navigation from './components/NavBar';
+import Navigation from './components/NavBar/NavBar';
 
 function App() {
     return (

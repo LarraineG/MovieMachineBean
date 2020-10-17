@@ -1,17 +1,27 @@
-import React, { Component } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
-import Card from "../components/Card";
-import Search from "../components/Search";
+import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'reactstrap';
+import Card from "../components/Card/Card";
 import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
-
-
-
+// import API from '../utils/API';
+// import { response } from 'express';
 
 const Dashboard = (props) => {
-
-  //functions, componentDidMounts go here
   
-    const { user, isAuthenticated } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
+
+    // const [ movie, setMovie ] = useState({});
+
+    // useEffect( ()=> {
+    //   if(!isLoading){
+    //   API.getAddedMovie(user.sub)
+    //   .then(response=>{console.log(response);
+    //   const movieArray=(response.data);
+    //   console.log(movieArray[0].movie)
+    //   setMovie(movieArray[0])
+    //   .catch(console.log)
+    //   })}
+    // },
+    // [user, isLoading])
 
     return (
 
@@ -22,20 +32,14 @@ const Dashboard = (props) => {
         <Row className="justify-content-center m-3">
           <h1>My List Page</h1>
         </Row>
-            <h2>{user.name}</h2>
-            <p>{user.email}</p>
-            <p>{user.sub}</p>
-          <Search />
+            <h2>{}</h2>
           <Card 
-          className=""
-          goSeeMovie="false"
           />
           </Container>
       </section>
 
     )
 }
-
 
 export default withAuthenticationRequired(Dashboard, {
   // Show a message while the user waits to be redirected to the next page.
