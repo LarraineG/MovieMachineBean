@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./card.css";
 import {Col, Row,
   Card, CardImg, CardText, CardBody,
   CardTitle, Button, ButtonGroup
 } from 'reactstrap';
+import API from "../utils/API";
+
 
 const Example = (props) => {
 
@@ -19,6 +21,17 @@ const Example = (props) => {
     setCSelected([...cSelected]);
   }
 
+  
+  const[movie, setMovie]=useState({});
+  useEffect( () => {
+      API.addMovie()
+      .then(res => 
+        setMovie(res.data)
+      )
+      .catch(err => console.log(err));
+  },
+  [])
+
   return (
     
     <div>
@@ -29,8 +42,8 @@ const Example = (props) => {
             </Col>
             <Col>
                 <CardBody>
-                <CardTitle>Movie Title{props.movieName}</CardTitle>
-                <CardText>Movie Date{props.date}</CardText>
+                <CardTitle>Movie Title{movie.title}</CardTitle>
+                <CardText>Movie Date</CardText>
                     <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim enim vitae massa hendrerit interdum. In et ipsum dui. Maecenas accumsan ipsum eu urna bibendum, et blandit mi pretium. Nullam at condimentum purus. Fusce id sollicitudin ante. Pellentesque bibendum{props.movieSummary}</CardText>
                 </CardBody>
             </Col>

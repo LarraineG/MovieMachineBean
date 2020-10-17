@@ -26,10 +26,7 @@ const Dashboard = (props) => {
             <p>{user.email}</p>
             <p>{user.sub}</p>
           <Search />
-          <Card 
-          className=""
-          goSeeMovie="false"
-          />
+          <Card />
           </Container>
       </section>
 
