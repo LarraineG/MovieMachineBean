@@ -3,6 +3,7 @@ import FeaturedCard from '../components/FeaturedCard';
 import { Container, Row, Col } from 'reactstrap';
 import DidYouKnow from '../components/DidYouKnowCard'
 
+
 const styles = {
     FeaturedCard: {
         MarginLeft: "300px"
