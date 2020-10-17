@@ -3,12 +3,6 @@ import FeaturedCard from '../components/FeaturedCard';
 import { Container, Row, Col } from 'reactstrap';
 import DidYouKnow from '../components/DidYouKnowCard'
 
-const styles = {
-    FeaturedCard: {
-        MarginLeft: "300px"
-    }
-}
-
 const Home = (props) => {
     return (
         <Container fluid>
@@ -23,6 +17,5 @@ const Home = (props) => {
         </Container>
     );
 }
-
 
 export default Home;

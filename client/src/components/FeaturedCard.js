@@ -1,26 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Col, Row,
   Card, CardImg, CardText, CardBody,
   CardTitle
 } from 'reactstrap';
-//import picture from "../pages/";
 
 const MovieCard = (props) => {
-
-  const [cSelected, setCSelected] = useState([]);
-  const [rSelected, setRSelected] = useState(null);
-
-  const onCheckboxBtnClick = (selected) => {
-    const index = cSelected.indexOf(selected);
-    if (index < 0) {
-      cSelected.push(selected);
-    } else {
-      cSelected.splice(index, 1);
-    }
-    setCSelected([...cSelected]);
-  }
 
 
   return (
