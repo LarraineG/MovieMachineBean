@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const db = require("./models");
 // This file empties the Books collection and inserts the books below
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/project3"
+  process.env.MONGODB_URI || "mongodb://172.17.0.1/project3"
 );
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
