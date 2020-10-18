@@ -58,10 +58,5 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
         idCall:idCall,
         utellyCall:utellyCall,
         searchCall:searchCall,
-<<<<<<< HEAD
         getFact, getAddedMovie, addMovie
-=======
-        getFact, getAddedMovie, 
-        addMovie
->>>>>>> 10b46c313fe6d796f50b577f659cbdea2a857b91
     };

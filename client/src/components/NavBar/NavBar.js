@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -12,14 +11,15 @@ import {
 import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
 import { Link } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+//import { useAuth0 } from '@auth0/auth0-react';
 
 
 const NavBar = (props) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const { user } = useAuth0();
+//  const { user } = useAuth0();
+  const { user } = "guest";
 
   return (
     <div>

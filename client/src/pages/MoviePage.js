@@ -19,10 +19,6 @@ const MoviePage = (props) => {
         API.searchCall(props.movie).then(
 
             response=> { const movieId=response.data.results[0].id;
-<<<<<<< HEAD
-               
-=======
->>>>>>> 10b46c313fe6d796f50b577f659cbdea2a857b91
                 
             API.idCall(movieId).then(function({data:response}){
                 console.log(response);
