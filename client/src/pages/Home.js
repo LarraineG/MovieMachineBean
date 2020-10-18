@@ -2,7 +2,6 @@ import React from 'react';
 import FeaturedCard from '../components/FeaturedCard';
 import { Container, Row, Col } from 'reactstrap';
 import DidYouKnow from '../components/DidYouKnowCard'
-import MovieQuotes from '../components/MovieQuotesbu';
 
 
 const Home = (props) => {
@@ -16,9 +15,6 @@ const Home = (props) => {
                     <DidYouKnow/>
                 </Col>
             </Row>
-            <Row>
-                <MovieQuotes/>
-                </Row>
 
         </Container>
     );

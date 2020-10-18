@@ -1,31 +1,17 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, useHistory } from "react-router-dom";
 import Home from './pages/Home'
 import MoviePage from './pages/MoviePage'
 import Admin from './pages/Admin'
 import MyList from './pages/My_List';
-<<<<<<< HEAD
-import Navigation from './components/NavBar';
-import Context from './Context';
-=======
 import Navigation from './components/NavBar/NavBar';
->>>>>>> 10b46c313fe6d796f50b577f659cbdea2a857b91
 
-class App extends Component {
-    state = {
-	quote: null
-    }
-    render() {
+function App() {
     return (
-      <Context.Provider value={{
-         quote: this.state.quote
-      }}>
         <Router>
             <Routes></Routes>
         </Router>
-      </Context.Provider>
     );
-    }
 }
 
 function Routes(props) {
@@ -34,16 +20,19 @@ function Routes(props) {
 
     const [SearchString, setSearchString] = useState("")
 
+
     function handleInputChange(event) {
         const { value } = event.target;
         setSearchString(value)
     };
+
     function EnterBtn(event) {
         event.preventDefault()
         console.log(SearchString);
         history.push("/MoviePage")
-
     }
+
+
     return (
         <div>
             <Navigation onChange={handleInputChange} searchInput={SearchString} onSubmit={EnterBtn} />
@@ -54,8 +43,4 @@ function Routes(props) {
         </div>
     )
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8302aca6e133069db7ee7b3641bbb85973d5406b
 export default App;
