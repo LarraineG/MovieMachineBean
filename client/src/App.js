@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Route, useHistory } from "react-router-dom";
 import Home from './pages/Home'
 import MoviePage from './pages/MoviePage'
 import Admin from './pages/Admin'
 import MyList from './pages/My_List';
 import Navigation from './components/NavBar';
+import Context from './Context';
 
-function App() {
+class App extends Component {
+    state = {
+	quote: null
+    }
+    render() {
     return (
+      <Context.Provider value={{
+         quote: this.state.quote
+      }}>
         <Router>
             <Routes></Routes>
         </Router>
+      </Context.Provider>
     );
+    }
 }
 
 function Routes(props) {
@@ -20,19 +30,16 @@ function Routes(props) {
 
     const [SearchString, setSearchString] = useState("")
 
-
     function handleInputChange(event) {
         const { value } = event.target;
         setSearchString(value)
     };
-
     function EnterBtn(event) {
         event.preventDefault()
         console.log(SearchString);
         history.push("/MoviePage")
+
     }
-
-
     return (
         <div>
             <Navigation onChange={handleInputChange} searchInput={SearchString} onSubmit={EnterBtn} />
@@ -43,4 +50,5 @@ function Routes(props) {
         </div>
     )
 }
+
 export default App;

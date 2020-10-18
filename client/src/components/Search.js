@@ -16,7 +16,7 @@ const SearchBox = (props) => {
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle caret>
               Genre
-        </DropdownToggle>
+            </DropdownToggle>
             <DropdownMenu>
               <DropdownItem>Comedy</DropdownItem>
               <DropdownItem>Drama</DropdownItem>

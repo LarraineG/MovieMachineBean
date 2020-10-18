@@ -17,20 +17,8 @@ const MoviePage = (props) => {
         API.searchCall(props.movie).then(
 
             response=> { const movieId=response.data.results[0].id;
-                // console.log(response);
-                // const movieArray=response.data.results
-                // .map(arrfunc);
-                // function arrfunc(mov){
-                //     var movobj={
-                //         title:mov.title,
-                //         date:mov.release_date.substring(0,4),
-                //         summary:mov.overview,
-                //         id:mov.id,
-                //         poster:"https://image.tmdb.org/t/p/w200"+mov.poster_path
-                //     }
-                //         return(movobj);
-                // }
-                // console.log(movieArray);
+               
+                
             API.idCall(movieId).then(function({data:response}){
                 console.log(response);
                 var dirObj=response.credits.crew.filter(x=> x.department=="Directing");
