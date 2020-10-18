@@ -2,26 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'reactstrap';
 import Card from "../components/Card/Card";
 import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
-// import API from '../utils/API';
-// import { response } from 'express';
+import API from '../utils/API';
+import { response } from 'express';
 
 const Dashboard = (props) => {
   
-  const { user, isAuthenticated } = useAuth0();
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
-    // const [ movie, setMovie ] = useState({});
+    const [ movies, setMovies ] = useState({});
 
-    // useEffect( ()=> {
-    //   if(!isLoading){
-    //   API.getAddedMovie(user.sub)
-    //   .then(response=>{console.log(response);
-    //   const movieArray=(response.data);
-    //   console.log(movieArray[0].movie)
-    //   setMovie(movieArray[0])
-    //   .catch(console.log)
-    //   })}
-    // },
-    // [user, isLoading])
+    useEffect( ()=> {
+      if(!isLoading){
+      API.getAddedMovie(user.sub)
+      .then(response=>{console.log(response);
+      const movieArray=(response.data);
+      console.log(movieArray)
+      setMovies(movieArray)
+      .catch(console.log)
+      })}
+    },
+    [user, isLoading])
 
     return (
 
@@ -32,7 +32,7 @@ const Dashboard = (props) => {
         <Row className="justify-content-center m-3">
           <h1>My List Page</h1>
         </Row>
-            <h2>{}</h2>
+            
           <Card 
           />
           </Container>
