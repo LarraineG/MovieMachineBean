@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
+
     const searchCall=function(search){
     var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=5a3f3373b8ebcad2db18450af15ec4fd&language=en-US&query="+search+"&page=1&include_adult=false";
             return(axios.get(queryURL));
@@ -41,12 +42,14 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
     
     }
 
-      // Gets all saved movies
-        const getAddedMovie = function() {
+    // const getAddedMovie = function(user) {
+    // return axios.get("/api/myList/"+user);
+    // }
+
+    const getAddedMovie = function() {
     return axios.get("/api/myList");
     }
 
-   // Adds movie to the database
     const addMovie = function(listmovieData, id) {
     return axios.post("/api/myList/"+id, listmovieData);
     }
@@ -55,5 +58,10 @@ const APIKey = "5a3f3373b8ebcad2db18450af15ec4fd";
         idCall:idCall,
         utellyCall:utellyCall,
         searchCall:searchCall,
+<<<<<<< HEAD
         getFact, getAddedMovie, addMovie
+=======
+        getFact, getAddedMovie, 
+        addMovie
+>>>>>>> 10b46c313fe6d796f50b577f659cbdea2a857b91
     };

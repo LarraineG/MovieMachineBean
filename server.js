@@ -25,10 +25,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-//require in apiRoutes when ready
-//
-
-
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

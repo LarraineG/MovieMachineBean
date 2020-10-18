@@ -4,8 +4,12 @@ import Home from './pages/Home'
 import MoviePage from './pages/MoviePage'
 import Admin from './pages/Admin'
 import MyList from './pages/My_List';
+<<<<<<< HEAD
 import Navigation from './components/NavBar';
 import Context from './Context';
+=======
+import Navigation from './components/NavBar/NavBar';
+>>>>>>> 10b46c313fe6d796f50b577f659cbdea2a857b91
 
 class App extends Component {
     state = {

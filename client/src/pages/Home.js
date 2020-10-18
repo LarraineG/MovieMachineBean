@@ -5,13 +5,6 @@ import DidYouKnow from '../components/DidYouKnowCard'
 import MovieQuotes from '../components/MovieQuotesbu';
 
 
-
-const styles = {
-    FeaturedCard: {
-        MarginLeft: "300px"
-    }
-}
-
 const Home = (props) => {
     return (
         <Container fluid>
@@ -30,6 +23,5 @@ const Home = (props) => {
         </Container>
     );
 }
-
 
 export default Home;
