@@ -2,26 +2,20 @@ import React from 'react';
 import FeaturedCard from '../components/FeaturedCard';
 import { Container, Row, Col } from 'reactstrap';
 import DidYouKnow from '../components/DidYouKnowCard'
-import MovieQuotes from '../components/MovieQuotesbu';
-
-
+import Banner from '../components/MovieBanner';
 const Home = (props) => {
     return (
-        <Container fluid>
+        <Container fluid style={{ backgroundColor: "black" }}>
             <Row>
+                <Banner />
                 <Col sm="7">
-                    <FeaturedCard />
+                    <FeaturedCard style={{ backgroundColor: "black" }} />
                 </Col>
                 <Col sm="3">
-                    <DidYouKnow/>
+                    <DidYouKnow style={{ backgroundColor: "black" }} />
                 </Col>
             </Row>
-            <Row>
-                <MovieQuotes/>
-                </Row>
-
         </Container>
     );
 }
-
 export default Home;
