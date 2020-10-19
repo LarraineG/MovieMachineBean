@@ -2,30 +2,6 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 import Card from "../components/Card/Card";
-<<<<<<< HEAD
-import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
-import API from '../utils/API';
-import { response } from 'express';
-
-const Dashboard = (props) => {
-  
-  const { user, isAuthenticated, isLoading } = useAuth0();
-
-    const [ movies, setMovies ] = useState({});
-
-    useEffect( ()=> {
-      if(!isLoading){
-      API.getAddedMovie(user.sub)
-      .then(response=>{console.log(response);
-      const movieArray=(response.data);
-      console.log(movieArray)
-      setMovies(movieArray)
-      .catch(console.log)
-      })}
-    },
-    [user, isLoading])
-
-=======
 //import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 import API from '../utils/API';
 import Context from '../Context';
@@ -66,19 +42,9 @@ class MyList extends Component {
   }
   render() {
     const { movies } = this.state;
->>>>>>> d8bc6150a096ac5d89ded65b3fb88406e94e3fd2
     return (
       <section className="My_List">
         <Container className="themed-container" fluid={true}>
-<<<<<<< HEAD
-        <Row className="justify-content-center m-3">
-          <h1>My List Page</h1>
-        </Row>
-            
-          <Card 
-          />
-          </Container>
-=======
           <Row className="justify-content-center m-3">
             <h1 style={{ border: "3px dotted rebeccapurple", padding: "2rem 4rem", margine: "1rem 0" }}>My List Page</h1>
           </Row>
@@ -89,9 +55,13 @@ class MyList extends Component {
               >We'll show your past movie searches here</p>
             </Row>
           )}
-          {movies.map(movie => <div>{movie.title}</div>)}
+          {movies.map(movie => 
+          <Card title={movie.title}
+                summary={movie.summary}
+                poster={movie.poster.replace("w600_and_h900_bestv2","w200")}
+                date={movie.date}
+          />)}
         </Container>
->>>>>>> d8bc6150a096ac5d89ded65b3fb88406e94e3fd2
       </section>
     )
   }
