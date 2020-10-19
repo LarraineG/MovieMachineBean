@@ -41,7 +41,7 @@ const NavBar = (props) => {
               </form>
             </NavItem>
             <NavItem>
-            <NavLink><Link to="/Admin">Admin</Link></NavLink>
+            <NavLink><Link to="/Recommended">Recommended</Link></NavLink>
             </NavItem>
           </Nav>
           <p>{user ? "Hello, " + user.given_name: "" }</p>

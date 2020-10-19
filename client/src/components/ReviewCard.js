@@ -9,17 +9,19 @@ const ReviewCard = (props) => {
       };
     return (
         <Media>
-              <Media left href="https://via.placeholder.com/50">
-                <Media object src="https://via.placeholder.com/50" alt="Generic placeholder image" />
+              <Media left href="{https://via.placeholder.com/50}">
+                <Media object src={props.poster} alt="Generic placeholder image" />
               </Media>
               <Media body>
                 <Media heading>
-                  Username {props.username}
+                  {props.title}
                 </Media>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 {props.review}
               </Media>
-              <ReactStars count={5} onChange={ratingChanged} />
+              <Media>
+                written by {props.user}
+              </Media>
+              <ReactStars count={4} />
         </Media>
     )
 }

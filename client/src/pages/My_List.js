@@ -55,7 +55,11 @@ class MyList extends Component {
               >We'll show your past movie searches here</p>
             </Row>
           )}
-          {movies.map(movie => <div>{movie.title}</div>)}
+          {movies.map(movie => <Card title={movie.title}
+            summary={movie.summary}
+            poster={movie.poster.replace("w600_and_h900_bestv2", "w200")}
+            date={movie.date}
+          />)}
         </Container>
       </section>
     )

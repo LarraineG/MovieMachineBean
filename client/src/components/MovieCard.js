@@ -5,7 +5,7 @@ import {Col, Row,
   InputGroup,
   InputGroupAddon, Input
 } from 'reactstrap';
-import ReviewCard from './ReviewCard';
+
 
 
 
@@ -29,17 +29,6 @@ return (
                   <CardText>Runtime: {props.runtime}</CardText>
                 </Col>
               </CardBody>
-          </Col>
-          <Col>
-            <ReviewCard />
-            <ReviewCard />
-            <ReviewCard />
-            <ReviewCard />
-            <InputGroup>
-              <Input />
-              <InputGroupAddon addonType="append"><Button>Submit Movie Review</Button></InputGroupAddon>
-
-            </InputGroup>
           </Col>
       </Row>
     </Card>

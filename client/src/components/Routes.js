@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, useHistory } from "react-router-dom";
 import Home from '../pages/Home'
 import MoviePage from '../pages/MoviePage'
-import Admin from '../pages/Admin'
+import Recommended from '../pages/Recommended'
 import MyList from '../pages/My_List';
 import Navigation from '../components/NavBar/NavBar';
 function Routes(props) {
@@ -23,7 +23,7 @@ function Routes(props) {
             <Route exact path={["/Home", "/"]} component={Home} />
             <Route exact path="/MoviePage"><MoviePage movie={SearchString} /></Route>
             <Route exact path="/My_List" component={MyList} />
-            <Route exact path="/Admin" component={Admin} />
+            <Route exact path="/Recommended" component={Recommended} />
         </div>
     )
 }
