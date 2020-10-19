@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -33,18 +32,18 @@ const NavBar = (props) => {
             </NavItem>
             <NavItem>
               <form onSubmit={props.onSubmit}>
-              <input onChange={props.onChange}
-                value={props.searchInput}
-                name="search"
-                placeholder="Search Movie Title"/>
+                <input onChange={props.onChange}
+                  value={props.searchInput}
+                  name="search"
+                  placeholder="Search Movie Title" />
                 <button type="submit">Search</button>
               </form>
             </NavItem>
             <NavItem>
-            <NavLink><Link to="/Recommended">Recommended</Link></NavLink>
+              <NavLink><Link to="/Recommended">Recommended</Link></NavLink>
             </NavItem>
           </Nav>
-          <p>{user ? "Hello, " + user.given_name: "" }</p>
+          <p>{user ? "Hello, " + user.given_name : ""}</p>
           <LoginButton />
           <LogoutButton />
         </Collapse>

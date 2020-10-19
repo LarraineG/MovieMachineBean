@@ -56,9 +56,9 @@ class MyList extends Component {
             </Row>
           )}
           {movies.map(movie => <Card title={movie.title}
-            summary={movie.summary}
-            poster={movie.poster.replace("w600_and_h900_bestv2", "w200")}
-            date={movie.date}
+                summary={movie.summary}
+                poster={movie.poster.replace("w600_and_h900_bestv2","w200")}
+                date={movie.date}
           />)}
         </Container>
       </section>

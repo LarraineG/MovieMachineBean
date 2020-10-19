@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 
-const routes = require ("./routes")
+const routes = require("./routes")
 app.use(routes)
 
 if (process.env.NODE_ENV === "production") {
